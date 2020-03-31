@@ -1,6 +1,7 @@
 package ch.fhnw.oop2.module07.ab4;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
@@ -25,7 +26,10 @@ final class ObservableCollection extends VBox {
 		String[] names = {"Anna", "Beatrice", "Charles", "Donald"};
 		observableList = FXCollections.observableArrayList(names);
 		
+//		ListChangeListener<String> listener = change -> observableList.get)
+		
 		shuffle = new Button("Shuffle");
+		shuffle.setOnAction(e->FXCollections.shuffle(observableList));
 		toolBar = new ToolBar(shuffle);
 		
 		listView = new ListView<>(observableList);	

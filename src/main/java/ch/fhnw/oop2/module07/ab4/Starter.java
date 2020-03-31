@@ -8,9 +8,7 @@ public final class Starter extends Application {
 
 	@Override
 	public void start(Stage stage) throws Exception {
-		
 		final Scene scene = new Scene(new ObservableCollection(), 400, 400);
-		
 		stage.setScene(scene);
 		stage.setResizable(true);
 		stage.setTitle("Arbeitsblatt (4)");
